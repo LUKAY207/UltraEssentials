@@ -26,7 +26,7 @@ class TPAcceptCommand extends Command implements PluginOwned {
             $sender->sendMessage($loader->translate('command-executor-not-player', $loader->getPrefix()));
             return;
         }
-        if (!$sender->hasPermission('ultraessentials.tpaaccept.command')) {
+        if (!$sender->hasPermission('ultraessentials.tpaccept.command')) {
             $sender->sendMessage($loader->translate('command-executor-no-permission', $loader->getPrefix()));
             return;
         }
