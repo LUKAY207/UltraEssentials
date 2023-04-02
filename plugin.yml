@@ -14,3 +14,9 @@ permissions:
     default: true
   ultraessentials.tpall.command:
     default: op
+  ultraessentials.vanish.command:
+    default: op
+  ultraessentials.unvanish.command:
+    default: op
+  ultraessentials.see.vanished:
+    default: op

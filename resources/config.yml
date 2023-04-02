@@ -10,6 +10,8 @@ tpa-expire-after-time: 30
 
 # MESSAGES
 
+message-join: '§e{player} entered the server.'
+message-quit: '§e{player} left the server.'
 message-sent-tpa: '{prefix} You sent §a§l{player}§r§f a§l teleport request§r§f.'
 message-sent-tpa-target: '{prefix} §l{player}§r§f has sent you a§l teleport request§r§f. Run the§a /tpaccept§f command to§a accept§f the request. Run the§c /tpdecline§f command to§c decline§f the request.'
 message-sent-tpahere: '{prefix} You sent §a§l{player}§r§f a§l teleport here request§r§f.'
@@ -22,6 +24,12 @@ message-tpadecline: '{prefix} You rejected§c {player}§f teleport request.'
 message-tpadecline-target: '{prefix}§c {player}§f rejected your teleport request.'
 message-tpall: '{prefix} You have successfully teleported everyone to you.'
 message-tpall-target: '{prefix} All players have been teleported to§a {player}§f.'
+message-vanished: '{prefix} You put yourself in Vanish mode.'
+message-vanished-target: '{prefix} §a{player}§f put you in vanish mode.'
+message-vanished-target-executor: '{prefix} You put§a {player}§f in vanish mode.'
+message-unvanished: '{prefix} You unvanished yourself.'
+message-unvanished-target: '{prefix}§c {player}§f unvanished you.'
+message-unvanished-target-executor: '{prefix} You unvanished§c {player}§f.'
 
 # COMMANDS
 
@@ -31,6 +39,10 @@ command-executor-no-permission: '{prefix} §cYou are not allowed to use this com
 command-player-not-found: '{prefix} §cThis player could not be found.'
 command-tpa-unnecessary-teleportation: '{prefix} §cYou can not teleport to yourself.'
 command-tpa-exists-not: '{prefix} You currently have no teleport request.'
+command-vanish-vanished: '{prefix}§a You§f are already vanished.'
+command-vanish-vanished-target: '{prefix}§a {player}§f is already vanished.'
+command-vanish-not-vanished: '{prefix} You are not vanished.'
+command-vanish-not-vanished-target: '{prefix}§c {player}§f is not vanished.'
 
 # TPA COMMAND
 command-tpa-description: 'This command sends a teleport request to a player'
@@ -44,15 +56,25 @@ command-tpahere-aliases: []
 
 # TPAccept COMMAND
 command-tpaccept-description: 'This command accepts a teleport request'
-command-tpaccept-usage-message: '§Use: §7/tpaccept'
+command-tpaccept-usage-message: '§cUse: §7/tpaccept'
 command-tpaccept-aliases: []
 
 # TPADecline COMMAND
 command-tpadecline-description: 'This command declines a teleport request'
-command-tpadecline-usage-message: '§Use: §7/tpadecline'
+command-tpadecline-usage-message: '§cUse: §7/tpadecline'
 command-tpadecline-aliases: []
 
 # TPAll COMMAND
 command-tpall-description: 'This command teleports all online players to you'
-command-tpall-usage-message: '§Use: §7/tpall'
+command-tpall-usage-message: '§cUse: §7/tpall'
 command-tpall-aliases: []
+
+# Vanish COMMAND
+command-vanish-description: 'This command puts you in Vanish mode'
+command-vanish-usage-message: '§cUse: §7/vanish <player>'
+command-vanish-aliases: ['v']
+
+# UnVanish COMMAND
+command-unvanish-description: 'This command ends the vanish mode'
+command-unvanish-usage-message: '§cUse: §7/unvanish <player>'
+command-unvanish-aliases: ['unv']
