@@ -14,7 +14,7 @@ use pocketmine\plugin\PluginOwned;
 class TPAcceptCommand extends Command implements PluginOwned {
 
     public function __construct(string $name, Translatable|string $description = "", Translatable|string|null $usageMessage = null, array $aliases = []) {
-        $this->setPermission('ultraessentialstp.tpaccept.command');
+        $this->setPermission('ultraessentials.tpaccept.command');
         parent::__construct($name, $description, $usageMessage, $aliases);
     }
 
@@ -26,7 +26,7 @@ class TPAcceptCommand extends Command implements PluginOwned {
             $sender->sendMessage($loader->translate('command-executor-not-player', $loader->getPrefix()));
             return;
         }
-        if (!$sender->hasPermission('ultraessentialstp.tpaaccept.command')) {
+        if (!$sender->hasPermission('ultraessentials.tpaaccept.command')) {
             $sender->sendMessage($loader->translate('command-executor-no-permission', $loader->getPrefix()));
             return;
         }
