@@ -35,9 +35,9 @@ class TPAllCommand extends Command implements PluginOwned {
                 return;
             }
             $player->teleport($sender->getLocation());
-            $sender->sendMessage($loader->translate('message-tpall', $loader->getPrefix()));
-            $loader->getServer()->broadcastMessage($loader->translate('message-tpall-target', $loader->getPrefix(), $sender));
         }
+        $sender->sendMessage($loader->translate('message-tpall', $loader->getPrefix()));
+        $loader->getServer()->broadcastMessage($loader->translate('message-tpall-target', $loader->getPrefix(), $sender));
     }
 
 
