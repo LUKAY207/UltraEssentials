@@ -1,0 +1,16 @@
+name: UltraEssentials
+main: LUKAY\UltraEssentials\Loader
+author: LUKAY
+api: 5.0.0
+version: 0.0.3
+permissions:
+  ultraessentials.tpa.command:
+    default: true
+  ultraessentials.tpahere.command:
+    default: true
+  ultraessentials.tpaccept.command:
+    default: true
+  ultraessentials.tpadecline.command:
+    default: true
+  ultraessentials.tpall.command:
+    default: op

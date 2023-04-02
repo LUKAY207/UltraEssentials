@@ -1,0 +1,58 @@
+# This is the Configuration File for the 'UltraEssentialsPlugin'
+
+config-version: 1.0.0
+
+# SETTINGS
+
+prefix: '§6Essentials§2TP §7»§f'
+
+tpa-expire-after-time: 30
+
+# MESSAGES
+
+message-sent-tpa: '{prefix} You sent §a§l{player}§r§f a§l teleport request§r§f.'
+message-sent-tpa-target: '{prefix} §l{player}§r§f has sent you a§l teleport request§r§f. Run the§a /tpaccept§f command to§a accept§f the request. Run the§c /tpdecline§f command to§c decline§f the request.'
+message-sent-tpahere: '{prefix} You sent §a§l{player}§r§f a§l teleport here request§r§f.'
+message-sent-tpahere-target: '{prefix} §l{player}§r§f has sent you a§l teleport here request§r§f. Run the§a /tpaccept§f command to§a accept§f the request. Run the§c /tpdecline§f command to§c decline§f the request.'
+message-tpaccept: '{prefix} You were teleported to§a {player}§r§f.'
+message-tpaccept-target: '{prefix}§a {player}§r§f was teleported to you.'
+message-tpahereaccept: '{prefix}§a {player}§r§f was teleported to you.'
+message-tpahereaccept-target: '{prefix} You were teleported to§a {player}§r§f.'
+message-tpadecline: '{prefix} You rejected§c {player}´s§f teleport request.'
+message-tpadecline-target: '{prefix}§c {player}§f rejected your teleport request.'
+message-tpall: '{prefix} You have successfully teleported everyone to you.'
+message-tpall-target: '{prefix} All players have been teleported to§a {player}§f.'
+
+# COMMANDS
+
+# EXECUTION FAILURE
+command-executor-not-player: '{prefix} §cThis command can only be executed in-game.'
+command-executor-no-permission: '{prefix} §cYou are not allowed to use this command.'
+command-player-not-found: '{prefix} §cThis player could not be found.'
+command-tpa-unnecessary-teleportation: '{prefix} §cYou can not teleport to yourself.'
+command-tpa-exists-not: '{prefix} You currently have no teleport request.'
+
+# TPA COMMAND
+command-tpa-description: 'This command sends a teleport request to a player'
+command-tpa-usage-message: '§cUse: §7/tpa <player>'
+command-tpa-aliases: []
+
+# TPAHere COMMAND
+command-tpahere-description: 'This command sends a Teleport Here request'
+command-tpahere-usage-message: '§cUse: §7/tpahere <player>'
+command-tpahere-aliases: []
+
+# TPAccept COMMAND
+command-tpaccept-description: 'This command accepts a teleport request'
+command-tpaccept-usage-message: '§Use: §7/tpaccept'
+command-tpaccept-aliases: []
+
+# TPADecline COMMAND
+command-tpadecline-description: 'This command declines a teleport request'
+command-tpadecline-usage-message: '§Use: §7/tpadecline'
+command-tpadecline-aliases: []
+
+# TPAll COMMAND
+command-tpall-description: 'This command teleports all online players to you'
+command-tpall-usage-message: '§Use: §7/tpall'
+command-tpall-aliases: []
