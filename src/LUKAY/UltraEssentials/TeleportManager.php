@@ -22,6 +22,8 @@ class TeleportManager {
         if (isset($this->teleportation[$teleportSubject->getName()]) && $this->teleportation[$teleportSubject->getName()]['time'] + Loader::getInstance()->getConfig()->get('tpa-expire-after-time') <= time()) {
             unset($this->teleportation[$teleportSubject->getName()]);
             return false;
+        } elseif (!isset($this->teleportation[$teleportSubject->getName()])) {
+            return false;
         }
         return true;
     }
