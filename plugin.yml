@@ -2,8 +2,14 @@ name: UltraEssentials
 main: LUKAY\UltraEssentials\Loader
 author: LUKAY
 api: 5.0.0
-version: 0.0.3
+version: 0.0.4
 permissions:
+  ultraessentials.home.command:
+    default: true
+  ultraessentials.homes.command:
+    default: true
+  ultraessentials.sethome.command:
+    default: true
   ultraessentials.tpa.command:
     default: true
   ultraessentials.tpahere.command:

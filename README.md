@@ -13,3 +13,7 @@ At the moment the plugin has the following features:
 > - /tpaccept (Accepts a '/tpa' or '/tpahere')
 > - /tpadecline (Declines a '/tpa' or '/tpahere')
 > - /tpall (Teleports all online players to you)
+> - /vanish (Turns vanish on)
+> - /unvanish (Turns vanish off)
+> - /home (Teleports you to chosen home)
+> - /sethome (Sets a home)
