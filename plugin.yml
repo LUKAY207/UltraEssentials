@@ -2,7 +2,7 @@ name: UltraEssentials
 main: LUKAY\UltraEssentials\Loader
 author: LUKAY
 api: 5.0.0
-version: 0.0.4
+version: 0.0.5
 permissions:
   ultraessentials.home.command:
     default: true

@@ -43,7 +43,7 @@ class SetHomeCommand extends Command implements PluginOwned  {
             $sender->sendMessage($loader->translate('command-home-name-used', $loader->getPrefix()));
             return;
         }
-        if ($homeManager->getMax($sender) == Loader::getInstance()->getPlayerData()->getNested($sender->getName() . '.homes.count')) {
+        if ($homeManager->getMax($sender) == Loader::getInstance()->getPlayerData()->getNested($sender->getName() . '.homeCount')) {
             $sender->sendMessage($loader->translate('command-sethome-limit-achieved', $loader->getPrefix()));
             return;
         }

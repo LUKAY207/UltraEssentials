@@ -35,7 +35,7 @@ class HomeManager {
      */
     public function setHome(Player $player, string $homeName, Vector3 $position, World $world): void {
         $playerData = Loader::getInstance()->getPlayerData();
-        $playerData->setNested($player->getName() . '.homes.count', $playerData->getNested($player->getName() . '.homes.count') + 1);
+        $playerData->setNested($player->getName() . '.homeCount', $playerData->getNested($player->getName() . '.homeCount') + 1);
         $playerData->setNested($player->getName() . '.homes.' . $homeName . '.position.x', $position->getFloorX());
         $playerData->setNested($player->getName() . '.homes.' . $homeName . '.position.y', $position->getFloorY());
         $playerData->setNested($player->getName() . '.homes.' . $homeName . '.position.z', $position->getFloorZ());
@@ -49,6 +49,7 @@ class HomeManager {
      */
     public function deleteHome(Player $player): void {
         $playerData = Loader::getInstance()->getPlayerData();
+        $playerData->setNested($player->getName() . '.homeCount', $playerData->getNested($player->getName() . '.homeCount') - 1);
         $playerData->removeNested($player->getName());
         $playerData->save();
         $playerData->reload();
@@ -60,6 +61,10 @@ class HomeManager {
             return false;
         }
         return true;
+    }
+
+    public function getHomes(Player $player): array {
+        return Loader::getInstance()->getPlayerData()->getNested($player->getName() . '.homes');
     }
 
     public function getPosition(Player $player, string $homeName): Position {
