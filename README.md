@@ -18,3 +18,4 @@ At the moment the plugin has the following features:
 > - /home <home> (Teleports you to chosen home)
 > - /homes (Shows you a list of all homes created by a player)
 > - /sethome <home> (Sets a home)
+> - /deletehome <home> (Deletes a home)

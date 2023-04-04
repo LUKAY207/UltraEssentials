@@ -15,7 +15,8 @@ message-join: '§e{player} entered the server.'
 message-quit: '§e{player} left the server.'
 message-home-teleport: '{prefix} You successfully teleported to§a {home}.'
 message-homes: '{prefix} Your homes: '
-message-sethome-created: '{prefix} You have successfully created {home}.'
+message-sethome-created: '{prefix} You have successfully created§a {home}.'
+message-deletehome-deleted: '{prefix} You have successfully deleted§c {home}'
 message-sent-tpa: '{prefix} You sent §a§l{player}§r§f a§l teleport request§r§f.'
 message-sent-tpa-target: '{prefix} §l{player}§r§f has sent you a§l teleport request§r§f. Run the§a /tpaccept§f command to§a accept§f the request. Run the§c /tpdecline§f command to§c decline§f the request.'
 message-sent-tpahere: '{prefix} You sent §a§l{player}§r§f a§l teleport here request§r§f.'
@@ -51,6 +52,11 @@ command-vanish-vanished: '{prefix}§c You are already vanished.'
 command-vanish-vanished-target: '{prefix}§c {player} is already vanished.'
 command-vanish-not-vanished: '{prefix}§c You are not vanished.'
 command-vanish-not-vanished-target: '{prefix}§c {player} is not vanished.'
+
+# DeleteHome COMMAND
+command-deletehome-description: 'Teleports you to your home'
+command-deletehome-usage-message: '§cUse: §7/home <home>'
+command-deletehome-aliases: ['delhome']
 
 # Home COMMAND
 command-home-description: 'Teleports you to your home'

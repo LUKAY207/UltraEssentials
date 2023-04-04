@@ -8,15 +8,14 @@ use LUKAY\UltraEssentials\Loader;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\lang\Translatable;
-use pocketmine\math\Vector3;
 use pocketmine\player\Player;
 use pocketmine\plugin\Plugin;
 use pocketmine\plugin\PluginOwned;
 
-class SetHomeCommand extends Command implements PluginOwned  {
+class DeleteHomeCommand extends Command implements PluginOwned {
 
     public function __construct(string $name, Translatable|string $description = "", Translatable|string|null $usageMessage = null, array $aliases = []) {
-        $this->setPermission('ultraessentials.sethome.command');
+        $this->setPermission('ultraessentials.deletehome.command');
         parent::__construct($name, $description, $usageMessage, $aliases);
     }
 
@@ -31,24 +30,20 @@ class SetHomeCommand extends Command implements PluginOwned  {
             $sender->sendMessage($loader->translate('command-executor-not-player', $loader->getPrefix()));
             return;
         }
-        if (!$sender->hasPermission('ultraessentials.sethome.command')) {
+        if (!$sender->hasPermission('ultraessentials.deletehome.command')) {
             $sender->sendMessage($loader->translate('command-executor-no-permission', $loader->getPrefix()));
             return;
         }
         if (empty($args[0])) {
-            $sender->sendMessage($loader->translate('command-sethome-usage-message', $loader->getPrefix()));
+            $sender->sendMessage($loader->translate('command-deletehome-usage-message', $loader->getPrefix()));
             return;
         }
-        if ($homeManager->existsHome($sender, $args[0])) {
-            $sender->sendMessage($loader->translate('command-sethome-name-used', $loader->getPrefix()));
+        if (!$homeManager->existsHome($sender, $args[0])) {
+            $sender->sendMessage($loader->translate('command-home-not-found', $loader->getPrefix()));
             return;
         }
-        if ($homeManager->getMax($sender) == Loader::getInstance()->getPlayerData()->getNested($sender->getName() . '.homeCount')) {
-            $sender->sendMessage($loader->translate('command-sethome-limit-achieved', $loader->getPrefix()));
-            return;
-        }
-        $homeManager->setHome($sender, $args[0], $sender->getOffsetPosition(new Vector3($sender->getPosition()->getX(), $sender->getPosition()->getY(), $sender->getPosition()->getZ())), $sender->getWorld());
-        $sender->sendMessage($loader->translate('message-sethome-created', null, null, ['{prefix}', '{home}'], [$loader->getPrefix(), $args[0]]));
+        $homeManager->deleteHome($sender, $args[0]);
+        $sender->sendMessage($loader->translate('message-deletehome-deleted', null, null, ['{prefix}', '{home}'], [$loader->getPrefix(), $args[0]]));
     }
 
     public function getOwningPlugin(): Plugin {

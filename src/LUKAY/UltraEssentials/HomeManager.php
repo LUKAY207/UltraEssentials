@@ -47,10 +47,10 @@ class HomeManager {
     /**
      * @throws JsonException
      */
-    public function deleteHome(Player $player): void {
+    public function deleteHome(Player $player, string $homeName): void {
         $playerData = Loader::getInstance()->getPlayerData();
         $playerData->setNested($player->getName() . '.homeCount', $playerData->getNested($player->getName() . '.homeCount') - 1);
-        $playerData->removeNested($player->getName());
+        $playerData->removeNested($player->getName() . '.homes.' . $homeName);
         $playerData->save();
         $playerData->reload();
     }
