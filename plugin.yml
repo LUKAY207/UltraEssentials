@@ -2,7 +2,7 @@ name: UltraEssentials
 main: LUKAY\UltraEssentials\Loader
 author: LUKAY
 api: 5.0.0
-version: 0.0.6
+version: 0.0.7
 permissions:
   ultraessentials.deletehome.command:
     default: true
@@ -12,6 +12,8 @@ permissions:
     default: true
   ultraessentials.sethome.command:
     default: true
+  ultraessentials.unlimited.homes:
+    default: op
   ultraessentials.tpa.command:
     default: true
   ultraessentials.tpahere.command:
@@ -22,9 +24,17 @@ permissions:
     default: true
   ultraessentials.tpall.command:
     default: op
+  ultraessentials.heal.command:
+    default: op
+  ultraessentials.heal.others.command:
+    default: op
   ultraessentials.vanish.command:
     default: op
+  ultraessentials.vanish.others.command:
+    default: op
   ultraessentials.unvanish.command:
+    default: op
+  ultraessentials.unvanish.others.command:
     default: op
   ultraessentials.see.vanished:
     default: op

@@ -30,8 +30,7 @@ class VanishCommand extends Command implements PluginOwned {
             $sender->sendMessage($loader->translate('command-executor-no-permission', $loader->getPrefix()));
             return;
         }
-
-        if (isset($args[0])) {
+        if (isset($args[0]) && $sender->hasPermission('ultraessentials.vanish.others.command')) {
             if (!$loader->getServer()->getPlayerExact($args[0]) instanceof Player) {
                 $sender->sendMessage($loader->translate('command-player-not-found', $loader->getPrefix()));
                 return;

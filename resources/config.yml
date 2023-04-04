@@ -29,6 +29,9 @@ message-tpadecline: '{prefix} You rejected§c {player}§f teleport request.'
 message-tpadecline-target: '{prefix}§c {player}§f rejected your teleport request.'
 message-tpall: '{prefix} You have successfully teleported everyone to you.'
 message-tpall-target: '{prefix} All players have been teleported to§a {player}§f.'
+message-heal-healed: '{prefix} You have successfully healed yourself.'
+message-heal-healed-other: '{prefix} You healed§a {player}§f.'
+message-heal-got-healed: '{prefix}§a {player}§f healed you.'
 message-vanished: '{prefix} You put yourself in Vanish mode.'
 message-vanished-target: '{prefix} §a{player}§f put you in vanish mode.'
 message-vanished-target-executor: '{prefix} You put§a {player}§f in vanish mode.'
@@ -72,6 +75,12 @@ command-homes-aliases: []
 command-sethome-description: 'Sets a home'
 command-sethome-usage-message: '§cUse: §7/sethome <home>'
 command-sethome-aliases: []
+
+# Heal COMMAND
+command-heal-description: 'Heals a player'
+command-heal-usage-message: '§cUse: §7/heal <player>'
+command-heal-aliases: []
+
 
 # TPA COMMAND
 command-tpa-description: 'This command sends a teleport request to a player'

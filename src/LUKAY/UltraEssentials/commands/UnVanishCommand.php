@@ -31,7 +31,7 @@ class UnVanishCommand extends Command implements PluginOwned {
             return;
         }
 
-        if (isset($args[0])) {
+        if (isset($args[0]) && $sender->hasPermission('ultraessentials.unvanish.others.command')) {
             if (!$loader->getServer()->getPlayerExact($args[0]) instanceof Player) {
                 $sender->sendMessage($loader->translate('command-player-not-found', $loader->getPrefix()));
                 return;
