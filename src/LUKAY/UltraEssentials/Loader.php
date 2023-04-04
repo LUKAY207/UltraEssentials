@@ -3,6 +3,7 @@
 namespace LUKAY\UltraEssentials;
 
 use LUKAY\UltraEssentials\commands\DeleteHomeCommand;
+use LUKAY\UltraEssentials\commands\FeedCommand;
 use LUKAY\UltraEssentials\commands\HealCommand;
 use LUKAY\UltraEssentials\commands\HomeCommand;
 use LUKAY\UltraEssentials\commands\HomesCommand;
@@ -39,6 +40,7 @@ class Loader extends PluginBase {
                 new HomeCommand('home', $config->get('command-home-description'), $config->get('command-home-usage-message'), $config->get('command-home-aliases')),
                 new HomesCommand('homes', $config->get('command-homes-description'), $config->get('command-homes-usage-message'), $config->get('command-homes-aliases')),
                 new SetHomeCommand('sethome', $config->get('command-sethome-description'), $config->get('command-sethome-usage-message'), $config->get('command-sethome-aliases')),
+                new FeedCommand('feed', $config->get('command-feed-description'), $config->get('command-feed-usage-message'), $config->get('command-feed-aliases')),
                 new HealCommand('heal', $config->get('command-heal-description'), $config->get('command-heal-usage-message'), $config->get('command-heal-aliases')),
                 new TPACommand('tpa', $config->get('command-tpa-description'), $config->get('command-tpa-usage-message'), $config->get('command-tpa-aliases')),
                 new TPAHereCommand('tpahere', $config->get('command-tpahere-description'), $config->get('command-tpahere-usage-message'), $config->get('command-tpahere-aliases')),

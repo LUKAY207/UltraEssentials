@@ -19,3 +19,5 @@ At the moment the plugin has the following features:
 > - /homes (Shows you a list of all homes created by a player)
 > - /sethome <home> (Sets a home)
 > - /deletehome <home> (Deletes a home)
+> - /heal <player> (Heals a player)
+> - /feed <player> (Feeds a player)

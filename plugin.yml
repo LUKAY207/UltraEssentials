@@ -2,7 +2,7 @@ name: UltraEssentials
 main: LUKAY\UltraEssentials\Loader
 author: LUKAY
 api: 5.0.0
-version: 0.0.7
+version: 0.0.8
 permissions:
   ultraessentials.deletehome.command:
     default: true
@@ -23,6 +23,10 @@ permissions:
   ultraessentials.tpadecline.command:
     default: true
   ultraessentials.tpall.command:
+    default: op
+  ultraessentials.feed.command:
+    default: op
+  ultraessentials.feed.others.command:
     default: op
   ultraessentials.heal.command:
     default: op
