@@ -45,6 +45,12 @@ message-unvanished: '{prefix} You unvanished yourself.'
 message-unvanished-target: '{prefix}§c {player}§f unvanished you.'
 message-unvanished-target-executor: '{prefix} You unvanished§c {player}§f.'
 
+# FORMS
+
+form-account-title: '§aAccount §7|§a {player}'
+form-account-content: 'This player was on the server with {accountCount} account/s. {line}§7 »§a {accounts} {line} {line}§f {player} {line}§7 »§f 
+Created on:§a {creationDate}'
+form-account-closebutton: '§7 » §cClose'
 # COMMANDS
 
 # EXECUTION FAILURE
@@ -61,6 +67,11 @@ command-vanish-vanished: '{prefix}§c You are already vanished.'
 command-vanish-vanished-target: '{prefix}§c {player} is already vanished.'
 command-vanish-not-vanished: '{prefix}§c You are not vanished.'
 command-vanish-not-vanished-target: '{prefix}§c {player} is not vanished.'
+
+# Account COMMAND
+command-account-description: 'Shows account information of a player'
+command-account-usage-message: '§cUse: §7/account <player>'
+command-account-aliases: ['acc']
 
 # DeleteHome COMMAND
 command-deletehome-description: 'Teleports you to your home'

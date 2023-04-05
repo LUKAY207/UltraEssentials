@@ -21,3 +21,4 @@ At the moment the plugin has the following features:
 > - /deletehome <home> (Deletes a home)
 > - /heal <player> (Heals a player)
 > - /feed <player> (Feeds a player)
+> - /account <player> (Shows information about a player)

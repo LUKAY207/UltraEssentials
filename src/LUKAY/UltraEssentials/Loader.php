@@ -2,6 +2,7 @@
 
 namespace LUKAY\UltraEssentials;
 
+use LUKAY\UltraEssentials\commands\AccountCommand;
 use LUKAY\UltraEssentials\commands\DeleteHomeCommand;
 use LUKAY\UltraEssentials\commands\FeedCommand;
 use LUKAY\UltraEssentials\commands\HealCommand;
@@ -36,6 +37,7 @@ class Loader extends PluginBase {
         $this->getServer()->getPluginManager()->registerEvents(new PlayerQuitListener(), $this);
         $this->getServer()->getCommandMap()->registerAll('UltraEssentials',
             [
+                new AccountCommand('account', $config->get('command-account-description'), $config->get('command-account-usage-message'), $config->get('command-account-aliases')),
                 new DeleteHomeCommand('deletehome', $config->get('command-deletehome-description'), $config->get('command-deletehome-usage-message'), $config->get('command-deletehome-aliases')),
                 new HomeCommand('home', $config->get('command-home-description'), $config->get('command-home-usage-message'), $config->get('command-home-aliases')),
                 new HomesCommand('homes', $config->get('command-homes-description'), $config->get('command-homes-usage-message'), $config->get('command-homes-aliases')),

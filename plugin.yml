@@ -2,8 +2,10 @@ name: UltraEssentials
 main: LUKAY\UltraEssentials\Loader
 author: LUKAY
 api: 5.0.0
-version: 0.0.8
+version: 0.0.9
 permissions:
+  ultraessentials.account.command:
+    default: op
   ultraessentials.deletehome.command:
     default: true
   ultraessentials.home.command:
