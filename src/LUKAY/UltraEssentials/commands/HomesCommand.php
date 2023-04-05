@@ -26,7 +26,7 @@ class HomesCommand extends Command implements PluginOwned  {
             $sender->sendMessage($loader->translate('command-executor-not-player', $loader->getPrefix()));
             return;
         }
-        if ($loader->getPlayerData()->getNested($sender->getName() . '.homeCount') == 0 && !$sender->hasPermission('ultraessentials.unlimited.homes')) {
+        if ($loader->getPlayerData()->getNested(filter_var($sender->getNetworkSession()->getIp(), FILTER_SANITIZE_NUMBER_INT) . '.' . $sender->getName() . '.homeCount') == 0) {
             $sender->sendMessage($loader->translate('command-homes-no-homes', $loader->getPrefix()));
             return;
         }

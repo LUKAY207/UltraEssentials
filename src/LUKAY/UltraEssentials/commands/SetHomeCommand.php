@@ -43,7 +43,7 @@ class SetHomeCommand extends Command implements PluginOwned  {
             $sender->sendMessage($loader->translate('command-sethome-name-used', $loader->getPrefix()));
             return;
         }
-        if ($homeManager->getMax($sender) == Loader::getInstance()->getPlayerData()->getNested($sender->getName() . '.homeCount')) {
+        if ($homeManager->getMax($sender) == Loader::getInstance()->getPlayerData()->getNested(filter_var($sender->getNetworkSession()->getIp(), FILTER_SANITIZE_NUMBER_INT) . '.' . $sender->getName() . '.homeCount') && !$sender->hasPermission('ultraessentials.unlimited.homes')) {
             $sender->sendMessage($loader->translate('command-sethome-limit-achieved', $loader->getPrefix()));
             return;
         }

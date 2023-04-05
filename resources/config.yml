@@ -6,6 +6,9 @@ config-version: 1.0.0
 
 prefix: '§6Essentials§2TP §7»§f'
 
+# TIMEZONE LIST (https://www.php.net/manual/en/timezones.php)
+timezone: 'Europe/Vienna'
+
 tpa-expire-after-time: 30
 default-max-homes: 3
 
