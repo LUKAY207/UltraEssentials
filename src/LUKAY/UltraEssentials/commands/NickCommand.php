@@ -43,7 +43,7 @@ class NickCommand extends Command implements PluginOwned {
             return;
         }
         $accountManager->setNickname($sender, implode(' ', $args));
-        $sender->sendMessage($loader->translate('message-nick-nicked', null, null, ['{prefix}', '{nick}'], [$loader->getPrefix(), $args[0]]));
+        $sender->sendMessage($loader->translate('message-nick-nicked', null, null, ['{prefix}', '{nick}'], [$loader->getPrefix(), implode(' ', $args)]));
     }
 
     public function getOwningPlugin(): Plugin {
