@@ -2,7 +2,7 @@ name: UltraEssentials
 main: LUKAY\UltraEssentials\Loader
 author: LUKAY
 api: 5.0.0
-version: 0.0.9
+version: 0.1.0
 permissions:
   ultraessentials.account.command:
     default: op
@@ -33,6 +33,12 @@ permissions:
   ultraessentials.heal.command:
     default: op
   ultraessentials.heal.others.command:
+    default: op
+  ultraessentials.nick.command:
+    default: op
+  ultraessentials.unick.command:
+    default: op
+  ultraessentials.unick.others.command:
     default: op
   ultraessentials.vanish.command:
     default: op

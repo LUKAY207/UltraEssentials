@@ -38,6 +38,10 @@ message-feed-got-fed: '{prefix}§a {player}§f fed you.'
 message-heal-healed: '{prefix} You have successfully healed yourself.'
 message-heal-healed-other: '{prefix} You healed§a {player}§f.'
 message-heal-got-healed: '{prefix}§a {player}§f healed you.'
+message-nick-nicked: '{prefix} Your nickname is now§a {nick}.'
+message-unick-unicked: '{prefix} You unicked yourself.'
+message-unick-unicked-player: '{prefix} You unicked§c {player}.'
+message-unick-got-unicked: '{prefix} You got unicked by§c {player}.'
 message-vanished: '{prefix} You put yourself in Vanish mode.'
 message-vanished-target: '{prefix} §a{player}§f put you in vanish mode.'
 message-vanished-target-executor: '{prefix} You put§a {player}§f in vanish mode.'
@@ -51,6 +55,7 @@ form-account-title: '§aAccount §7|§a {player}'
 form-account-content: 'This player was on the server with {accountCount} account/s. {line}§7 »§a {accounts} {line} {line}§f {player} {line}§7 »§f 
 Created on:§a {creationDate}'
 form-account-closebutton: '§7 » §cClose'
+
 # COMMANDS
 
 # EXECUTION FAILURE
@@ -63,6 +68,9 @@ command-sethome-name-used: '{prefix}§c You already have created a home with tha
 command-sethome-limit-achieved: '{prefix}§c You have already achieved the home limit.'
 command-tpa-unnecessary-teleportation: '{prefix}§c You can not teleport to yourself.'
 command-tpa-exists-not: '{prefix}§c You currently have no teleport request.'
+command-nick-not-allowed: '{prefix} You cannot use names of players who have been on this server as nicknames.'
+command-unick-not-nicked: '{prefix} You are not nicked.'
+command-unick-player-not-nicked: '{prefix}§c {player} is not nicked.'
 command-vanish-vanished: '{prefix}§c You are already vanished.'
 command-vanish-vanished-target: '{prefix}§c {player} is already vanished.'
 command-vanish-not-vanished: '{prefix}§c You are not vanished.'
@@ -93,7 +101,7 @@ command-sethome-description: 'Sets a home'
 command-sethome-usage-message: '§cUse: §7/sethome <home>'
 command-sethome-aliases: []
 
-# Heal COMMAND
+# Feed COMMAND
 command-feed-description: 'Feeds a player'
 command-feed-usage-message: '§cUse: §7/feed <player>'
 command-feed-aliases: []
@@ -102,6 +110,16 @@ command-feed-aliases: []
 command-heal-description: 'Heals a player'
 command-heal-usage-message: '§cUse: §7/heal <player>'
 command-heal-aliases: []
+
+# Nick COMMAND
+command-nick-description: 'Give yourself a nickname'
+command-nick-usage-message: '§cUse: §7/nick <nickname>'
+command-nick-aliases: []
+
+# Unick COMMAND
+command-unick-description: 'Give yourself a nickname'
+command-unick-usage-message: '§cUse: §7/unick <player>'
+command-unick-aliases: []
 
 # TPA COMMAND
 command-tpa-description: 'This command sends a teleport request to a player'

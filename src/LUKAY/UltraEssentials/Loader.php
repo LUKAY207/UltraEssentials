@@ -8,12 +8,14 @@ use LUKAY\UltraEssentials\commands\FeedCommand;
 use LUKAY\UltraEssentials\commands\HealCommand;
 use LUKAY\UltraEssentials\commands\HomeCommand;
 use LUKAY\UltraEssentials\commands\HomesCommand;
+use LUKAY\UltraEssentials\commands\NickCommand;
 use LUKAY\UltraEssentials\commands\SetHomeCommand;
 use LUKAY\UltraEssentials\commands\TPAcceptCommand;
 use LUKAY\UltraEssentials\commands\TPACommand;
 use LUKAY\UltraEssentials\commands\TPADeclineCommand;
 use LUKAY\UltraEssentials\commands\TPAHereCommand;
 use LUKAY\UltraEssentials\commands\TPAllCommand;
+use LUKAY\UltraEssentials\commands\UnickCommand;
 use LUKAY\UltraEssentials\commands\UnVanishCommand;
 use LUKAY\UltraEssentials\commands\VanishCommand;
 use LUKAY\UltraEssentials\listener\PlayerJoinListener;
@@ -44,6 +46,8 @@ class Loader extends PluginBase {
                 new SetHomeCommand('sethome', $config->get('command-sethome-description'), $config->get('command-sethome-usage-message'), $config->get('command-sethome-aliases')),
                 new FeedCommand('feed', $config->get('command-feed-description'), $config->get('command-feed-usage-message'), $config->get('command-feed-aliases')),
                 new HealCommand('heal', $config->get('command-heal-description'), $config->get('command-heal-usage-message'), $config->get('command-heal-aliases')),
+                new NickCommand('nick', $config->get('command-nick-description'), $config->get('command-nick-usage-message'), $config->get('command-nick-aliases')),
+                new UnickCommand('unick', $config->get('command-unick-description'), $config->get('command-unick-usage-message'), $config->get('command-unick-aliases')),
                 new TPACommand('tpa', $config->get('command-tpa-description'), $config->get('command-tpa-usage-message'), $config->get('command-tpa-aliases')),
                 new TPAHereCommand('tpahere', $config->get('command-tpahere-description'), $config->get('command-tpahere-usage-message'), $config->get('command-tpahere-aliases')),
                 new TPAcceptCommand('tpaccept', $config->get('command-tpaccept-description'), $config->get('command-tpaccept-usage-message'), $config->get('command-tpaccept-aliases')),
